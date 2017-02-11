@@ -66,14 +66,6 @@ public class Dimensions {
         return 15;
     }
 
-    public static int getObjectMinWidth() {
-        return 80;
-    }
-
-    public static int getObjectMaxWidth() {
-        return 90;
-    }
-
     public static int getObjectPositionHeight() {
         return 190;
     }

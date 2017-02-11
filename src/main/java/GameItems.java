@@ -29,17 +29,15 @@ public class GameItems extends JPanel {
     }
 
     private void drawObjects(Graphics objects) {
-        for(int a = 0; a <= 3; a++) {
-            int positionHeight = Dimensions.getObjectPositionHeight() + Dimensions.getObjectHeight() * a;
-            int objectPositionWidth = 0;
-            int positionStartWidth;
+        for (int a = 0; a < 3; a++) {
+            int positionHeight = (int) (Dimensions.getObjectPositionHeight() + Dimensions.getObjectHeight() * (a * 1.1));
+            int objectHeight = Dimensions.getObjectHeight();
+            int positionWidth = 0;
             do {
-                positionStartWidth = objectPositionWidth;
-                int positionEndWidth = positionStartWidth + (int) Math.random() * 10 + 90;
-//                objects.fillRect(objectPositionWidth,positionStartWidth, positionEndWidth, positionHeight);
-                objects.fillRect(positionStartWidth, positionHeight, objectPositionWidth, positionEndWidth);
-                objectPositionWidth = objectPositionWidth + positionEndWidth;
-            } while (objectPositionWidth + Dimensions.getObjectMaxWidth() < Dimensions.getScreenHeight());
+                int objectWidth = (int) Math.round(Math.random() * 100 + 20);
+                objects.fillRect(positionWidth, positionHeight, objectWidth, objectHeight);
+                positionWidth = positionWidth + objectWidth + 2;
+            } while (positionWidth + 120 <= Dimensions.getScreenWidth());
         }
     }
 }
