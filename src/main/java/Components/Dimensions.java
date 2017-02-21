@@ -67,7 +67,7 @@ public class Dimensions {
     }
 
     public static int getObjectPositionHeight() {
-        return 190;
+        return 120;
     }
 
 }

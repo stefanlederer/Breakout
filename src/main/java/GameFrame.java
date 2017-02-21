@@ -19,6 +19,7 @@ public class GameFrame extends main implements KeyListener {
         gamePanel = new JPanel();
         mainFrame.add(gamePanel);
 
+        GameItems.calcObjects();
         mainFrame.add(gameItems = new GameItems());
         mainFrame.addKeyListener(this);
 
